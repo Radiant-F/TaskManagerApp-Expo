@@ -11,6 +11,7 @@ import { useState } from "react";
 import CheckBox from "expo-checkbox";
 import { router } from "expo-router";
 import { useSignUp } from "@/services";
+import { PoppinsBold, PoppinsRegular } from "@/constant";
 
 export default function SignUp() {
   const [remember, setRemember] = useState(false);
@@ -75,7 +76,9 @@ export default function SignUp() {
             onValueChange={() => setRemember(!remember)}
           />
           <Gap width={5} />
-          <Text style={{ color: "white" }}>Ingat Saya</Text>
+          <Text style={{ color: "white", fontFamily: PoppinsRegular }}>
+            Ingat Saya
+          </Text>
         </Pressable>
 
         <Gap height={15} />
@@ -120,7 +123,7 @@ const styles = StyleSheet.create({
   textBtnTitle: {
     color: "white",
     fontSize: 16,
-    fontWeight: "bold",
+    fontFamily: PoppinsBold,
   },
   btnAction: {
     backgroundColor: "#00677E",
@@ -152,7 +155,7 @@ const styles = StyleSheet.create({
   textTitle: {
     color: "white",
     fontSize: 25,
-    fontWeight: "bold",
+    fontFamily: PoppinsBold,
   },
   container: {
     flex: 1,

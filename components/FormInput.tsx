@@ -9,6 +9,7 @@ import {
 import { MaterialCommunityIcons as Icon } from "@expo/vector-icons";
 import Gap from "./Gap";
 import { useState } from "react";
+import { PoppinsBold, PoppinsRegular } from "@/constant";
 
 type Props = {
   onChangeText?: (text: string) => void;
@@ -41,7 +42,7 @@ export default function FormInput({
           placeholder={placeholder}
           placeholderTextColor={"grey"}
           secureTextEntry={password && secure}
-          style={{ flex: 1, height: 50 }}
+          style={styles.input}
           onChangeText={onChangeText}
           autoCapitalize={autoCapitalize}
           keyboardType={keyboardType}
@@ -60,10 +61,14 @@ export default function FormInput({
 }
 
 const styles = StyleSheet.create({
+  input: {
+    flex: 1,
+    height: 50,
+    fontFamily: PoppinsRegular,
+  },
   textInputTitle: {
     color: "white",
-    fontWeight: "bold",
-    marginVertical: 5,
+    fontFamily: PoppinsBold,
   },
   btnEye: {
     justifyContent: "center",
